@@ -26,8 +26,32 @@ return require('packer').startup(function(use)
 
   use {'theprimeagen/harpoon'}
 
+  -- LSP
   use({'neovim/nvim-lspconfig'})
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
+
+  use {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = function()
+          require("nvim-autopairs").setup {}
+      end
+  }
+  
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    config = function() 
+      require("lualine").setup {}
+    end
+  }
+
+  use {
+    "folke/which-key.nvim",
+    config = function() 
+      require("which-key").setup()
+    end
+  }
 
 end)
