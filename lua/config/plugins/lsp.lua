@@ -10,6 +10,7 @@ return {
 
         lsp.elixirls.setup({
             capabilities = capabilities,
+            cmd = { "/run/current-system/sw/bin/elixir-ls" }
         })
 
         lsp.rust_analyzer.setup({
