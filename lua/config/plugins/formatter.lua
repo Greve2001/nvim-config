@@ -39,6 +39,7 @@ return {
 			rust = { "rustfmt" },
 			nix = { "nixfmt" },
 			elixir = { "elixir-ls" },
+			go = { "gofmt" }, -- Test to make sure works
 		},
 
 		default_format_opts = {
