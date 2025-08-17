@@ -40,6 +40,7 @@ return {
 
 		lsp.csharp_ls.setup({
 			capabilities = capabilities,
+			filetypes = { "cs", "razor" },
 		})
 	end,
 }
